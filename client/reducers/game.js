@@ -5,6 +5,7 @@ const initialState = {
   UI: {
     showBoard: false,
     showTimer: false,
+    answeredCorrectly: false,
   },
   data: {
     cardValues: [],
@@ -13,7 +14,8 @@ const initialState = {
     gameCompleted: false,
     startTime: false,
     endTime: false,
-    elapsed: 0
+    elapsed: 0,
+
   }
 };
 
@@ -24,7 +26,8 @@ const startGame = (state, action) => {
       showTimer: action.showTimer
     },
     data: {
-      startTime: action.startTime
+      startTime: action.startTime,
+      gameCompleted: false
     }
   });
 };
@@ -78,6 +81,9 @@ const scorePair = (state, action) => {
       cardToMatch: action.cardToMatch,
       pairsLeft: action.pairsLeft,
       gameCompleted: action.gameCompleted
+    },
+    UI: {
+      answeredCorrectly: action.answeredCorrectly
     }
   });
 };
@@ -85,7 +91,16 @@ const scorePair = (state, action) => {
 const endGame = (state, action) => {
   return merge({}, state, {
     UI: {
-      showTimer: action.showTimer
+      showTimer: action.showTimer,
+      showBoard: action.showBoard
+    }
+  });
+};
+
+const stopSound = (state, action) => {
+  return merge({}, state, {
+    UI: {
+      answeredCorrectly: action.answeredCorrectly
     }
   });
 };
@@ -98,6 +113,7 @@ export default function gameboard (state = initialState, action) {
     [actionTypes.SET_CARD_TO_MATCH]: setCardToMatch,
     [actionTypes.SET_ELAPSED]: setElapsed,
     [actionTypes.SCORE_PAIR]: scorePair,
-    [actionTypes.END_GAME]: endGame
+    [actionTypes.END_GAME]: endGame,
+    [actionTypes.STOP_SOUND]: stopSound
   }[action.type] || ((s) => s))(state, action);
 }

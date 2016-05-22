@@ -33,7 +33,8 @@ export function startGame () {
         type: actionTypes.START_GAME,
         showBoard: true,
         showTimer: true,
-        startTime: startTime
+        startTime: startTime,
+        gameCompleted: false
       });
     } catch(e) {
       const notifications = e.error;
@@ -165,8 +166,16 @@ export function scorePair (pairsLeft) {
         type: actionTypes.SCORE_PAIR,
         cardToMatch: false,
         pairsLeft: pairsLeft,
-        gameCompleted: gameCompleted
+        gameCompleted: gameCompleted,
+        showBoard: false,
+        answeredCorrectly: true
       });
+      setTimeout(() => {
+        dispatch({
+          type: actionTypes.STOP_SOUND,
+          answeredCorrectly: false
+        });
+      }, 1000);
     } catch(e) {
       const notifications = e.error;
       dispatch({

@@ -24,6 +24,6 @@ class Nav extends Component {
 }
 
 export default connect(
-  (state) => ({ }),
+  (state) => ({ gameboard: state.gameboard }),
   { }
 )(Nav);

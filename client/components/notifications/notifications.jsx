@@ -5,6 +5,8 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import { clearNotifications } from '../../actions/notifications';
 
+import SoundModule from './sound';
+
 import './notifications.scss';
 
   class Notifications extends Component {
@@ -13,7 +15,6 @@ import './notifications.scss';
     }
 
     handleRemove () {
-      console.log('werp');
       this.props.clearNotifications(this.props.notifications);
     }
 
@@ -42,6 +43,11 @@ import './notifications.scss';
               : <div></div>
             )}
             </ReactCSSTransitionGroup>
+            {(this.props.gameboard.UI.answeredCorrectly
+              ? <SoundModule />
+              : <div></div>
+            )}
+            
           </div>
         );
     }
@@ -49,7 +55,7 @@ import './notifications.scss';
   }
 
   export default connect(
-    (state) => ({ notifications: state.notifications }),
+    (state) => ({ notifications: state.notifications, gameboard: state.gameboard }),
     { clearNotifications }
   )(Notifications);
 

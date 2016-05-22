@@ -17,28 +17,43 @@ class Answer extends Component {
     return (
       <div id='answer-view'>
       {(this.props.gameboard.data.gameCompleted
-        ? <div id="winner-view">
-            <div>
+        ? <div id='winner-view'>
+            <div className='content'>
               YOU HAZ ALL THE CATS IN <span id='score'>{this.getTimeSpan(this.props.gameboard.data.elapsed)}</span> TIME.  PAWSOMEEEEE !!
+              <div className='start-game'>
+                <div className='content'>
+                  <div>
+                    Click to start a new game!
+                  </div>
+                  <button
+                    className='btn btn-sm'
+                    onClick={() => this.startGame()}
+                    >START
+                  </button>
+                </div>
+              </div>
+              <img src='http://www.thecatclub.org/wp-content/uploads/2015/02/cat-dj.jpg' alt=""/>
             </div>
-            <img src="http://www.thecatclub.org/wp-content/uploads/2015/02/cat-dj.jpg" alt=""/>
+            
           </div>
         : <div>
             {(this.props.gameboard.UI.showBoard
             ? <div>
-                <div>
+                <div id='board-container'>
                   <Board />
                 </div>
               </div>
             : <div className='start-game'>
-                <div>
-                  Click to start a new game!
+                <div className='content'>
+                  <div>
+                    Click to start a new game!
+                  </div>
+                  <button
+                    className='btn btn-sm'
+                    onClick={() => this.startGame()}
+                    >START
+                  </button>
                 </div>
-                <button
-                  className="btn btn-sm"
-                  onClick={() => this.startGame()}
-                  >START
-                </button>
               </div>
             )}
           </div>

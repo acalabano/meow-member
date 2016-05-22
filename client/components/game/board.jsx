@@ -7,8 +7,7 @@ import {
   hidePair, 
   setCardToMatch, 
   checkMatch, 
-  scorePair,
-  endGame 
+  scorePair
 } from '../../actions/game';
 
 import { addNotifications } from '../../actions/notifications';
@@ -22,24 +21,29 @@ class Board extends Component {
 
   render () {
     return (
-      <div id='board'>
-        {this.props.gameboard.data.cardValues.map(card => (
-          <div className='gamepiece-frame' key={`${card.id}`}>
-          {(card.visible
-            ? <div 
-              className='gamepiece'
-              >
-                <img src={`${card.url}`} alt=""/>
-              </div>
-            : <div 
-              className='gamepiece-hidden'
-              onClick={() => this.revealCard(card)}
-              >
-                Click to Reveal
-              </div>
-          )}
-          </div>
-        ))}
+      <div>
+        {(this.props.gameboard.UI.showBoard 
+          ? <div id='board'>
+              {this.props.gameboard.data.cardValues.map(card => (
+                <div className='gamepiece-frame' key={`${card.id}`}>
+                {(card.visible
+                  ? <div 
+                    className='gamepiece'
+                    >
+                      <img src={`${card.url}`} alt=""/>
+                    </div>
+                  : <div 
+                    className='gamepiece-hidden'
+                    onClick={() => this.revealCard(card)}
+                    >
+                      Click to Reveal
+                    </div>
+                )}
+                </div>
+              ))}
+            </div>
+          : <div></div>
+        )}
       </div>
     );
   }
@@ -58,6 +62,9 @@ class Board extends Component {
     if(card.url === this.props.gameboard.data.cardToMatch.url){
       setTimeout(function () {
         this.props.scorePair(this.props.gameboard.data.pairsLeft);
+        // FOR TESTING //
+        // this.props.scorePair(1);
+        // ---------- //
         this.props.addNotifications(['YEW DIDZ DIT !!']);
         if(this.props.gameboard.data.pairsLeft > 1){
           this.forceUpdate();
@@ -76,5 +83,5 @@ class Board extends Component {
 
 export default connect(
   (state) => ({ gameboard: state.gameboard }),
-  { addNotifications, revealCard, hidePair, setCardToMatch, checkMatch, scorePair, endGame }
+  { addNotifications, revealCard, hidePair, setCardToMatch, checkMatch, scorePair }
 )(Board);

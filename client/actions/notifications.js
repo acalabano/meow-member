@@ -13,7 +13,7 @@ export function addNotifications (notifications) {
         type: actionTypes.CLEAR_NOTIFICATIONS,
         notifications: clearNotifications,
         show: false
-      });;
+      });
     }, 500);
   };
 }

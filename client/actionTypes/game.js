@@ -6,3 +6,4 @@ export const SET_CARD_TO_MATCH = 'SET_CARD_TO_MATCH';
 export const SET_ELAPSED = 'SET_ELAPSED';
 export const SCORE_PAIR = 'SCORE_PAIR';
 export const END_GAME = 'END_GAME';
+export const STOP_SOUND = 'STOP_SOUND';

@@ -18,7 +18,7 @@ class Profile extends Component {
             <span className='header'>Player Name:</span> Emissary.io
           </div>
           <div>
-            <span className='header'>Lifetime Best:</span> 03:48:235
+            <span className='header'>Lifetime Best:</span> 01:08:23
           </div>
         </div>
         {(this.props.gameboard.UI.showTimer
