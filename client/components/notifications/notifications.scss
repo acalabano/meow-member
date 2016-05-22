@@ -1,0 +1,33 @@
+#notifications-container {
+  width: 1140px;
+  position: absolute;
+  opacity: 0.9;
+  top: 50%;
+  text-align: center;
+  white-space: pre-wrap;
+}
+#notifications-container .message {
+  height: 100%;
+  min-height: 25px;
+  background-color: #B0E2FF;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+#notifications-container .message .item {
+  align-self: center;
+}
+.notifications-enter {
+  opacity: 0.01;
+  transition: opacity 0.5s ease-in;
+}
+.notifications-enter.notifications-enter-active {
+  opacity: 1;
+}
+.notifications-leave {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+.notifications-leave.notifications-leave-active {
+  opacity: 0.01;
+}

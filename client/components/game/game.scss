@@ -1,0 +1,136 @@
+$border-color: #626262;
+$base-color: #DBDBDB;
+$body-color: #FFFAF0;
+$div-color: lighten( $base-color, 10% );
+$field-color: lighten( $div-color, 3% );
+
+#game-container .page {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+#game-container .page .row001 {
+  margin-top: 1rem;
+  flex-direction: row;
+  display: inline-flex;
+}
+#profile-view {
+  background-color: $div-color;
+  border: $border-color solid 2px;
+  border-radius: 10px;
+  padding: 1.5rem;
+  height: 85px;
+  flex: 1 auto;
+  display: inline-flex;
+}
+#profile-view .user-info {
+  margin: auto 0;
+  flex-direction: column;
+  flex: 2;
+}
+#profile-view .user-info .header {
+  font-weight: 800;
+  margin-right: 3rem;
+}
+#profile-view .game-status{
+  margin: auto 0;
+  flex-direction: column;
+  flex: 2;
+}
+#profile-view .timer {
+  text-align: center;
+  font-size: 2em;
+  font-weight: 800;
+}
+#profile-view .progress-area {
+  margin: auto 0;
+  flex-direction: column;
+  flex: 2;
+}
+#board {
+  column-count: 5;
+  column-gap: 0;
+  text-align: center;
+}
+#board .gamepiece-frame {
+  width: 200px;
+  height: 125px;
+  display: inline-block;
+  overflow: hidden;
+  break-inside: avoid;
+  border-radius: 10px;
+  border: $border-color solid 2px;
+}
+#board .gamepiece {
+  display: block;
+  border-radius: 10px;
+}
+#board .gamepiece-hidden {
+  display: block;
+  padding: 3px;
+  height: 100%;
+  text-align: center;
+}
+.question-view {
+  background-color: $div-color;
+  height: 450px;
+  border: $border-color solid 2px;
+  border-radius: 10px;
+  padding: 1rem;
+  flex: 1 auto;
+  margin-right: 1rem;
+  word-wrap: break-word;
+  max-width: 400px;
+}
+.question-view .header{
+  margin-bottom: 3rem;
+}
+.question-view .question-prompt{
+  font-style: italic;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+#answer-view {
+  background-color: $div-color;
+  height: 100%;
+  min-height: 575px;
+  border: $border-color solid 2px;
+  border-radius: 10px;
+  padding: 1rem;
+  -webkit-flex: 1;
+  flex: 3 auto;
+} 
+#answer-view textarea {
+  width: 100%;
+  height: 85%;
+  background-color: $field-color;
+  padding: 1rem;
+}
+#answer-view .start-game {
+  text-align: center;
+  margin-top: 15%;
+}
+#answer-view .start-game button{
+  margin: 10px;
+}
+.status .start-exam.btn{
+  margin: 1rem;
+}
+.submit-answer button {
+  margin-top: 1rem;
+  float: right;
+}
+#winner-view {
+  text-align: center;
+  margin-top: 5%;
+}
+#winner-view img{
+  margin: 15px;
+}
+#score {
+  text-align: center;
+  font-size: 2em;
+  font-weight: 800;
+  margin: 0 0.75rem;
+}
