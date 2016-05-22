@@ -1,6 +1,5 @@
-# Redux Temple
-Template starter kit with Webpack, React/Redux, Node/Express.
-User auth with JSON Web Tokens, and store-wide notifications system.
+# MEOW-MEMBER
+Memory game built on the back of cats.  Also, Node, React, Redux, Webpack.
 
 ### DEVELOPMENT
 Serves up on localhost:3000
@@ -9,21 +8,6 @@ Serves up on localhost:3000
 1. Install Node Modules:  
 ```npm i```
 
-2. Testing Environment:  
-```npm i -g mocha```
-
 #### Run 
-1.  Client
-  1. Run tests:  
-```npm run test:watch```
-
-  2. Run webpack to compile front-end in dev mode:  
+1. Run webpack to compile front-end in dev mode:  
 ```npm start```
-
-2.  Server
-  1.  Run tests:  
-```cd server && npm run test:watch```
-
-  2.  Run Babel to transpile Node/Express back-end for API routes:  
-```cd server && npm run build-dev:watch```
-# meow-member
