@@ -21,7 +21,7 @@ import Game from './components/game/game';
 const createStoreWithMiddleware = applyMiddleware(
   thunk,
   promise,
-  createLogger(),
+  // createLogger(),
 )(createStore);
 
 const store = createStoreWithMiddleware(reducers);
