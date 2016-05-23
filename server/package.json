@@ -1,0 +1,19 @@
+{
+  "name": "MEOW-MEMBER",
+  "main": "server.js",
+  "scripts": {
+    "test": "NODE_ENV=test mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive",
+    "test:watch": "npm run test -- --watch",
+    "build-server": "babel -d ./build ./app -s",
+    "build": "rm -rf build && mkdir build && npm run build-server",
+    "build-dev:watch": "babel-watch app/server"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
