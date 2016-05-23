@@ -11,7 +11,7 @@ class SoundModule extends React.Component {
     return (
       <div>
         <Audio
-          src={'http://localhost:3000/meow1.m4a'}
+          src={'http://wenson.io/meow1.m4a'}
           playing={true}
         />
       </div>
