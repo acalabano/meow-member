@@ -11,29 +11,29 @@ import Profile from '../game/profile';
 import './game.scss';
 
 class Game extends Component {
-	
-	render () {
-		const {
-			gameboard
-		} = this.props;
+  
+  render () {
+    const {
+      gameboard
+    } = this.props;
 
-		return (
-			<div id='game-container'>
-				<Nav />
-				<Notifications />
-				<div className='page'>
-					<Profile examId={this.props.examId}/>
-					 	<div className='row001'>
-							<Answer />
-						</div>
-				</div>
-			</div>
-		);
-	}
+    return (
+      <div id='game-container'>
+        <Nav />
+        <Notifications />
+        <div className='page'>
+          <Profile examId={this.props.examId}/>
+            <div className='row001'>
+              <Answer />
+            </div>
+        </div>
+      </div>
+    );
+  }
 
 }
 
 export default connect(
-	(state) => ({ gameboard: state.gameboard }),
-	{ }
+  (state) => ({ gameboard: state.gameboard }),
+  { }
 )(Game);
