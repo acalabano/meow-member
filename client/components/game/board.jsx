@@ -62,9 +62,6 @@ class Board extends Component {
     if(card.url === this.props.gameboard.data.cardToMatch.url){
       setTimeout(function () {
         this.props.scorePair(this.props.gameboard.data.pairsLeft);
-        // FOR TESTING //
-        // this.props.scorePair(1);
-        // ---------- //
         this.props.addNotifications(['YEW DIDZ DIT !!']);
         if(this.props.gameboard.data.pairsLeft > 1){
           this.forceUpdate();

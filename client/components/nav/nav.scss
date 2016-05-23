@@ -14,6 +14,7 @@ $field-color: #f9f9f9;
 	margin: 1rem 0;
 	padding: 1rem;
 	display: flex;
+	justfiy-content: center;
 	flex: 1 100%;
 }
 #nav .nav-title > a,
@@ -23,11 +24,8 @@ $field-color: #f9f9f9;
 	color: $nav-title;
 	margin: 0.5rem;
 	flex: 5;
-	/*font-family: 'Megrim';*/
-	/*font-family: 'Flamenco'; */
 	font-family: 'Lato';
 	font-weight: 100;
-
 }
 #nav .nav-title > a:hover{
 	text-decoration: none;
@@ -46,4 +44,23 @@ $field-color: #f9f9f9;
 #nav .nav-links > a {
 	padding: 1rem;
 	margin: 0 0 0 1rem;
+}
+#nav .top-scores {
+	align-self: center;
+	display: inline-flex;
+	font-size: 1.5rem;
+	font-weight: 100;
+	color: $nav-title;
+	flex: 3;
+}
+#nav .top-scores .content {
+	display: inline-flex;
+}
+#nav .top-scores .title {
+	font-size: 1.5rem;
+	margin: 0 2rem;
+	font-weight: 400;
+}
+#nav .top-scores .field {
+	margin: 0 0.6rem;
 }

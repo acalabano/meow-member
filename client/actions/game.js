@@ -33,8 +33,10 @@ export function startGame () {
         type: actionTypes.START_GAME,
         showBoard: true,
         showTimer: true,
+        pairsLeft: 10,
+        gameCompleted: false,
         startTime: startTime,
-        gameCompleted: false
+        elapsed: 0
       });
     } catch(e) {
       const notifications = e.error;

@@ -13,7 +13,6 @@ const initialState = {
     pairsLeft: 10,
     gameCompleted: false,
     startTime: false,
-    endTime: false,
     elapsed: 0,
 
   }
@@ -26,8 +25,10 @@ const startGame = (state, action) => {
       showTimer: action.showTimer
     },
     data: {
+      gameCompleted: action.gameCompleted,
+      pairsLeft: action.pairsLeft,
       startTime: action.startTime,
-      gameCompleted: false
+      elapsed: action.elapsed
     }
   });
 };

@@ -48,6 +48,10 @@ $field-color: lighten( $div-color, 3% );
   flex-direction: column;
   flex: 2;
 }
+#answer-view > div {
+  align-self: center;
+  text-align: center;
+}
 #board {
   column-count: 5;
   column-gap: 0;
