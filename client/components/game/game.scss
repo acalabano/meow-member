@@ -76,25 +76,6 @@ $field-color: lighten( $div-color, 3% );
   height: 100%;
   text-align: center;
 }
-.question-view {
-  background-color: $div-color;
-  height: 450px;
-  border: $border-color solid 2px;
-  border-radius: 10px;
-  padding: 1rem;
-  flex: 1 auto;
-  margin-right: 1rem;
-  word-wrap: break-word;
-  max-width: 400px;
-}
-.question-view .header{
-  margin-bottom: 3rem;
-}
-.question-view .question-prompt{
-  font-style: italic;
-  font-size: 1.2em;
-  font-weight: 600;
-}
 #answer-view {
   background-color: $div-color;
   height: 100%;
@@ -120,13 +101,6 @@ $field-color: lighten( $div-color, 3% );
 }
 #answer-view .start-game button{
   margin: 10px;
-}
-.status .start-exam.btn{
-  margin: 1rem;
-}
-.submit-answer button {
-  margin-top: 1rem;
-  float: right;
 }
 #winner-view {
   text-align: center;

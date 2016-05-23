@@ -29,27 +29,26 @@ import './notifications.scss';
           );
         }.bind(this));
 
-        return (
-          <div id='notifications-container'>
-            <ReactCSSTransitionGroup
-              transitionName='notifications'
-              transitionEnterTimeout={200}
-              transitionLeaveTimeout={400}
-            >
-            {(this.props.notifications.show
-              ? <div className='message' onClick={this.handleRemove.bind(this)}>
-                  {items}
-                </div>
-              : <div></div>
-            )}
-            </ReactCSSTransitionGroup>
-            {(this.props.gameboard.UI.answeredCorrectly
-              ? <SoundModule />
-              : <div></div>
-            )}
-            
-          </div>
-        );
+      return (
+        <div id='notifications-container'>
+          <ReactCSSTransitionGroup
+            transitionName='notifications'
+            transitionEnterTimeout={200}
+            transitionLeaveTimeout={400}
+          >
+          {(this.props.notifications.show
+            ? <div className='message' onClick={this.handleRemove.bind(this)}>
+                {items}
+              </div>
+            : <div></div>
+          )}
+          </ReactCSSTransitionGroup>
+          {(this.props.gameboard.UI.answeredCorrectly
+            ? <SoundModule />
+            : <div></div>
+          )}
+        </div>
+      );
     }
 
   }

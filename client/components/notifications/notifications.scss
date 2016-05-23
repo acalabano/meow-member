@@ -1,3 +1,6 @@
+$background-color: #FF6EB4;
+$text-color: #FF6EB4;
+
 #notifications-container {
   width: 1140px;
   position: absolute;
@@ -7,9 +10,10 @@
   white-space: pre-wrap;
 }
 #notifications-container .message {
+  text-color: $text-color;
   height: 100%;
   min-height: 25px;
-  background-color: #B0E2FF;
+  background-color: $background-color;
   cursor: pointer;
   display: flex;
   justify-content: center;

@@ -18,12 +18,6 @@ class SoundModule extends React.Component {
     )
   }
 
-  componentWillReceiveProps (newProps) {
-    this.setState({
-      soundSrc: newProps.soundSrc,
-      playing: newProps.playing
-    });
-  }
 }
 
 export default connect(

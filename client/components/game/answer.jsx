@@ -73,6 +73,7 @@ class Answer extends Component {
     var ms = String(elapsed % 1000 + 1000).substring(1,3);
     return m+":"+s+"."+ms;
   }
+  
 }
 
 export default connect(

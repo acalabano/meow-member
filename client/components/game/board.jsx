@@ -17,6 +17,9 @@ import './game.scss';
 class Board extends Component {
   constructor (props) {
     super (props);
+    this.state = {
+      finishedThinking: true
+    }
   }
 
   render () {
@@ -34,7 +37,7 @@ class Board extends Component {
                     </div>
                   : <div 
                     className='gamepiece-hidden'
-                    onClick={() => this.revealCard(card)}
+                    onClick={this.state.finishedThinking ? () => this.revealCard(card) : null}
                     >
                       Click to Reveal
                     </div>
@@ -59,20 +62,31 @@ class Board extends Component {
   }
 
   checkMatch (card) {
+    // disable onClick to prevent errors from fast-clicking
+    this.setState({finishedThinking: false});
+
     if(card.url === this.props.gameboard.data.cardToMatch.url){
       setTimeout(function () {
         this.props.scorePair(this.props.gameboard.data.pairsLeft);
         this.props.addNotifications(['YEW DIDZ DIT !!']);
+
+        // enable onClick after Timeout
+        this.setState({finishedThinking: true});
+
         if(this.props.gameboard.data.pairsLeft > 1){
           this.forceUpdate();
         }
-      }.bind(this) , 500)
+      }.bind(this) , 300)
     } else {
       setTimeout(function () {
         this.props.hidePair(card.id, this.props.gameboard.data.cardToMatch.id, this.props.gameboard.data.cardValues);
         this.props.addNotifications(['MEOW-STAKE !!']);
+
+        // enable onClick after Timeout
+        this.setState({finishedThinking: true});
+
         this.forceUpdate();
-      }.bind(this) , 500)
+      }.bind(this) , 300)
     }
   }
   
