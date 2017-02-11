@@ -23,7 +23,7 @@ class Nav extends Component {
               1.) 
             </div>
             <div className='name field'>
-              Player001 
+              Emissary.io 
             </div>
             <div className='time field'>
               00:97:52

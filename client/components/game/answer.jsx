@@ -32,7 +32,7 @@ class Answer extends Component {
                   </button>
                 </div>
               </div>
-              <img src='https://baaobaab.files.wordpress.com/2014/11/cat-dj.jpg' alt=""/>
+              <img src='http://www.thecatclub.org/wp-content/uploads/2015/02/cat-dj.jpg' alt=""/>
             </div>
             
           </div>
