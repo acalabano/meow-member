@@ -65,6 +65,10 @@ config = update(config, {
               'autoprefixer?browsers=last 3 versions',
               'sass?outputStyle=expanded'
           ]
+        },
+        {
+          test: /\.m4a$/,
+          loader: 'file?name=[name].[ext]',
         }
       ]
     }

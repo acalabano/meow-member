@@ -8,10 +8,11 @@ class SoundModule extends React.Component {
   }
 
   render () {
+    const meowWin = require('../../../dev/meow1.m4a');
     return (
       <div>
         <Audio
-          src={'http://meowmember.wenson.io/meow1.m4a'}
+          src={meowWin}
           playing={true}
         />
       </div>
