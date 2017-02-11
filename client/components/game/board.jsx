@@ -32,6 +32,7 @@ class Board extends Component {
                 {(card.visible
                   ? <div 
                     className='gamepiece'
+                    style={{backgroundImage: 'url(`${imageWin}`)'}}
                     >
                       <img src={`${card.url}`} alt=""/>
                     </div>

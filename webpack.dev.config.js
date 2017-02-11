@@ -71,9 +71,10 @@ config = update(config, {
           test: /\.m4a$/,
           loader: 'file?name=[name].[ext]',
         },
-        { test: /\.(gif|jpg|png|jpeg)$/, 
-          loader: 'url-loader?limit=20000' 
-        }
+        {
+          test: /\.(gif|jpg)$/,
+          loader: 'url-loader?limit=20000&name=images/[name].[ext]'
+        },
       ]
     }
   },

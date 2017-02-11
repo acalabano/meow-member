@@ -8,7 +8,10 @@ class SoundModule extends React.Component {
   }
 
   render () {
+    // for DEV
     // const meowWin = require('../../../dev/meow1.m4a');
+
+    // for PROD... need to use env vars
     const meowWin = require('../../../server/assets/meow1.m4a');
     return (
       <div>
