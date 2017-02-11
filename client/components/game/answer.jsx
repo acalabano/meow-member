@@ -38,8 +38,7 @@ class Answer extends Component {
                   </button>
                 </div>
               </div>
-              // <img src={imageWin} alt=""/>
-              <div style={{backgroundImage: 'url(`${imageWin}`)'}}></div>
+              <img src={imageWin} alt=""/>
             </div>
             
           </div>

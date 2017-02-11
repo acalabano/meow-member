@@ -72,7 +72,7 @@ config = update(config, {
         },
         {
           test: /\.(gif|jpg)$/,
-          loader: 'url-loader?limit=20000&name=images/[name].[ext]'
+          loader: 'url-loader?limit=20000&name=[name].[ext]'
         },
       ]
     }
