@@ -14,6 +14,8 @@ class Answer extends Component {
   }
 
   render () {
+    const imageWin = require('../../../dev/cat-dj.jpg');
+
     return (
       <div id='answer-view'>
       {(this.props.gameboard.data.gameCompleted
@@ -32,7 +34,7 @@ class Answer extends Component {
                   </button>
                 </div>
               </div>
-              <img src='https://baaobaab.files.wordpress.com/2014/11/cat-dj.jpg' alt=""/>
+              <img src={imageWin} alt=""/>
             </div>
             
           </div>

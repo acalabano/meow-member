@@ -51,17 +51,19 @@ export function startGame () {
 export function createCards () {
   return async dispatch => {
     const cardArt = [
-      'https://lh5.googleusercontent.com/-Zk_xoSha4jA/UNH4gWKmdsI/AAAAAAAAGns/1Acx-WAEVMA/s400/131.gif',
-      'http://www.catgifpage.com/gifs/197.gif',
-      'http://www.catgifpage.com/gifs/314.gif',
-      'http://www.catgifpage.com/gifs/186.gif',
-      'http://www.catgifpage.com/gifs/258.gif',
-      'http://www.catgifpage.com/gifs/290.gif',
-      'http://www.catgifpage.com/gifs/291.gif',
-      'http://www.catgifpage.com/gifs/249.gif',
-      'http://www.catgifpage.com/gifs/286.gif',
-      'http://www.catgifpage.com/gifs/274.gif'
+      '131.gif',
+      '197.gif',
+      '314.gif',
+      '186.gif',
+      '258.gif',
+      '290.gif',
+      '291.gif',
+      '249.gif',
+      '286.gif',
+      '274.gif'
     ];
+
+    cardArt.map(file => require(`../../assets/${file}`));
 
     const shuffledCardArt = shuffle(cardArt.concat(cardArt));
     const cardValues = createCardValues(shuffledCardArt);
