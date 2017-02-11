@@ -65,10 +65,10 @@ export function createCards () {
 
     // for DEV
     // cardArt.map(file => require(`../../dev/${file}`));
-    cardArt.map(file => `http://meowmember.wenson.io/${file}`);
+    // cardArt.map(file => `http://meowmember.wenson.io/${file}`);
 
     // for PROD
-    // cardArt.map(file => require(`../../server/assets/${file}`));
+    cardArt.map(file => require(`../../server/assets/${file}`));
 
     const shuffledCardArt = shuffle(cardArt.concat(cardArt));
     const cardValues = createCardValues(shuffledCardArt);

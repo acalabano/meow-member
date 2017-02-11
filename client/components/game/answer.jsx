@@ -15,10 +15,10 @@ class Answer extends Component {
 
   render () {
     // for DEV
-    const imageWin = require('../../../dev/cat-dj.jpg');
+    // const imageWin = require('../../../dev/cat-dj.jpg');
 
     // for PROD... need to use env vars
-    // const imageWin = require('../../../server/assets/cat-dj.jpg');
+    const imageWin = require('../../../server/assets/cat-dj.jpg');
 
     return (
       <div id='answer-view'>
