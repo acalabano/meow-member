@@ -15,7 +15,7 @@ class Answer extends Component {
 
   render () {
     // const imageWin = require('../../../dev/cat-dj.jpg');
-    const imageWin = require('../../../scripts/cat-dj.jpg');
+    const imageWin = require('../../../static/cat-dj.jpg');
 
     return (
       <div id='answer-view'>

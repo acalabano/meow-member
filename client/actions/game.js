@@ -64,7 +64,7 @@ export function createCards () {
     ];
 
     // cardArt.map(file => require(`../../dev/${file}`));
-    cardArt.map(file => require(`../../scripts/${file}`));
+    cardArt.map(file => require(`../../static/${file}`));
 
     const shuffledCardArt = shuffle(cardArt.concat(cardArt));
     const cardValues = createCardValues(shuffledCardArt);
