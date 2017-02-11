@@ -58,10 +58,11 @@ export function createCards () {
       'http://www.catgifpage.com/gifs/258.gif',
       'http://www.catgifpage.com/gifs/290.gif',
       'http://www.catgifpage.com/gifs/291.gif',
-      'http://www.catgifpage.com/gifs/223.gif',
+      'http://www.catgifpage.com/gifs/249.gif',
       'http://www.catgifpage.com/gifs/286.gif',
       'http://www.catgifpage.com/gifs/274.gif'
     ];
+
     const shuffledCardArt = shuffle(cardArt.concat(cardArt));
     const cardValues = createCardValues(shuffledCardArt);
     try {
