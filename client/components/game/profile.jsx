@@ -15,7 +15,7 @@ class Profile extends Component {
       <div id='profile-view'>
         <div className='user-info'>
           <div>
-            <span className='header'>Player Name:</span> Emissary.io
+            <span className='header'>Player Name:</span> Player001
           </div>
           <div>
             <span className='header'>Lifetime Best:</span> 01:08:23
