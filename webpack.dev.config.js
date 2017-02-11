@@ -25,9 +25,7 @@ if (process.env.NODE_ENV !== 'test') {
 
 config = update(config, {
   debug: { $set: true },
-
   profile: { $set: true },
-
   // devtool: { $set: 'eval-source-map' },
   devtool: { $set: 'cheap-source-map' },
 
